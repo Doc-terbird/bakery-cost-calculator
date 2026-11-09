@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bakery Pricing Spreadsheet &amp; Recipe Cost Calculator for Bakers</title>
+  <meta name="description" content="Small-batch baker recipe cost calculator — Excel &amp; Google Sheets. Waste-aware ingredient costs, packaging, labor, batch scaling, baker’s %, markup vs margin. Cottage bakery pricing from $6+ on Ko-fi.">
+  <meta name="keywords" content="bakery pricing spreadsheet, recipe cost calculator for bakers, cottage bakery pricing, cookie cost calculator, home bakery cost spreadsheet, baker's percentage calculator">
+  <link rel="canonical" href="https://doc-terbird.github.io/bakery-cost-calculator/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Small-Batch Baker Recipe Cost Calculator">
+  <meta property="og:description" content="Know what a batch costs before you set your price. Waste-aware costing, scaling, swaps, markup vs margin — Excel &amp; Google Sheets. From $6+ on Ko-fi.">
+  <meta property="og:url" content="https://doc-terbird.github.io/bakery-cost-calculator/">
+  <meta property="og:image" content="https://doc-terbird.github.io/bakery-cost-calculator/assets/03-Pricing.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Small-Batch Baker Recipe Cost Calculator">
+  <meta name="twitter:description" content="Cottage bakery pricing spreadsheet with waste-aware costs, scaling, and markup vs margin. Excel &amp; Google Sheets.">
+  <meta name="twitter:image" content="https://doc-terbird.github.io/bakery-cost-calculator/assets/03-Pricing.jpg">
+  <meta name="theme-color" content="#5C3A21">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <p class="brand">Small-Batch Baker</p>
+      <nav aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#demo">Try demo</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-sm" href="https://ko-fi.com/s/a8e4befbbc" rel="noopener">Buy on Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Excel &amp; Google Sheets · Macro-free</p>
+          <h1>Recipe cost calculator for cottage &amp; small-batch bakers</h1>
+          <p class="lede">Know what a batch really costs — ingredients (with waste/yield), packaging, active labor, and overhead — then price with clear markup <em>or</em> margin math. Built for cookies, cakes, bread, and other small batches.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://ko-fi.com/s/a8e4befbbc" rel="noopener">Buy on Ko-fi — $6+</a>
+            <a class="btn btn-ghost" href="#demo">Try the free cookie-cost demo</a>
+          </div>
+          <ul class="trust-list" aria-label="Product facts">
+            <li>One-time download · no subscription</li>
+            <li>Works in Excel and Google Sheets</li>
+            <li>Includes worked cookie example &amp; blank template</li>
+          </ul>
+        </div>
+        <figure class="hero-shot">
+          <img src="assets/03-Pricing.jpg" width="1200" height="800" alt="Pricing tab showing batch cost, unit cost, and markup versus margin suggested prices" loading="eager">
+          <figcaption>Pricing tab — batch cost, unit cost, markup vs margin</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="wrap">
+        <h2>What you get</h2>
+        <p class="section-lede">A reusable bakery pricing spreadsheet — not a promise of profit. Enter your prices and recipe details; the formulas do the arithmetic.</p>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <img src="assets/02-Recipe-Costing.jpg" width="800" height="520" alt="Recipe Costing tab with ingredient lines and batch totals" loading="lazy">
+            <h3>Waste-aware ingredient costs</h3>
+            <p>Prep waste and handling loss feed true cost per usable unit — so shell, peel, and bowl loss don’t silently understate your batch.</p>
+          </article>
+          <article class="feature-card">
+            <img src="assets/04-Batch-Scaling.jpg" width="800" height="520" alt="Batch Scaling tab showing original versus target yield" loading="lazy">
+            <h3>Batch scaling that respects fixed costs</h3>
+            <p>Scale ingredients and variable packaging with a clear factor. Fixed setup labor stays fixed unless you say otherwise.</p>
+          </article>
+          <article class="feature-card">
+            <img src="assets/05-Ingredient-Swaps.jpg" width="800" height="520" alt="Ingredient Swaps tab comparing original versus replacement cost" loading="lazy">
+            <h3>Ingredient swap cost calculator</h3>
+            <p>Compare one replacement row against your baseline — see the delta on batch and unit cost before you bake the test batch.</p>
+          </article>
+          <article class="feature-card">
+            <img src="assets/01-Instructions.jpg" width="800" height="520" alt="Instructions tab with workflow steps and support contact" loading="lazy">
+            <h3>Baker’s %, glossary &amp; formula reference</h3>
+            <p>Flour-relative baker’s percentages, a baking glossary with sourced cup-to-gram references, unit-price sanity flags, and a formula table that explains the why.</p>
+          </article>
+        </div>
+        <ul class="also-includes">
+          <li>Packaging &amp; active labor tabs</li>
+          <li>Markup vs margin pricing (they are not the same)</li>
+          <li>Worked cookie example: $9.00 batch / $0.75 per cookie</li>
+          <li>Blank template for your own recipes</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="demo" class="demo">
+      <div class="wrap">
+        <h2>Free mini cookie-cost demo</h2>
+        <p class="section-lede">A tiny in-browser taste of the math. The full workbook adds waste/yield, scaling, swaps, baker’s %, sanity flags, and a blank template.</p>
+        <form id="demo-form" class="demo-panel" novalidate>
+          <fieldset>
+            <legend>Batch inputs</legend>
+            <div class="field-grid">
+              <label>Ingredient cost ($)
+                <input type="number" id="ing" name="ing" min="0" step="0.01" value="1.75" inputmode="decimal">
+              </label>
+              <label>Packaging cost ($)
+                <input type="number" id="pack" name="pack" min="0" step="0.01" value="0.60" inputmode="decimal">
+              </label>
+              <label>Active labor cost ($)
+                <input type="number" id="labor" name="labor" min="0" step="0.01" value="6.00" inputmode="decimal">
+              </label>
+              <label>Other overhead ($)
+                <input type="number" id="oh" name="oh" min="0" step="0.01" value="0.65" inputmode="decimal">
+              </label>
+              <label>Finished sellable yield
+                <input type="number" id="yield" name="yield" min="0.0001" step="1" value="12" inputmode="decimal">
+              </label>
+              <label>Markup target (%)
+                <input type="number" id="markup" name="markup" min="0" step="1" value="100" inputmode="decimal">
+              </label>
+              <label>Margin target (%)
+                <input type="number" id="margin" name="margin" min="0" max="99.99" step="1" value="50" inputmode="decimal">
+              </label>
+            </div>
+          </fieldset>
+          <div class="demo-results" aria-live="polite">
+            <dl>
+              <div><dt>Batch cost</dt><dd id="out-batch">$9.00</dd></div>
+              <div><dt>Cost per item</dt><dd id="out-unit">$0.75</dd></div>
+              <div><dt>Suggested price @ markup</dt><dd id="out-markup">$1.50</dd></div>
+              <div><dt>Suggested price @ margin</dt><dd id="out-margin">$1.50</dd></div>
+            </dl>
+            <p id="demo-note" class="demo-note">Defaults match the workbook’s worked cookie example (illustrative prices, not market rates).</p>
+            <p id="demo-warn" class="demo-warn" hidden></p>
+          </div>
+        </form>
+        <p class="demo-cta"><a class="btn btn-primary" href="https://ko-fi.com/s/a8e4befbbc" rel="noopener">Get the full workbook on Ko-fi</a></p>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <div class="wrap">
+        <h2>FAQ</h2>
+        <details>
+          <summary>Does it work in Google Sheets?</summary>
+          <p>Yes. The download is a macro-free <code>.xlsx</code> built with ordinary formulas that also open in Google Sheets. Excel and Sheets both work; you’ll need compatible software or a Google account for Sheets.</p>
+        </details>
+        <details>
+          <summary>Is this legal, tax, or food-safety advice?</summary>
+          <p>No. It is a costing aid only. It does not provide legal, tax, accounting, nutrition, allergen, or food-safety advice. Cottage-food rules vary by place — check your local requirements separately.</p>
+        </details>
+        <details>
+          <summary>What’s the difference between markup and margin?</summary>
+          <p>Markup is profit divided by cost. Margin is profit divided by selling price. A 50% markup on a $2 cost is $3; a 50% margin on a $2 cost needs a $4 price. The workbook shows both so you don’t mix them up.</p>
+        </details>
+        <details>
+          <summary>Will scaling a recipe guarantee the same bake?</summary>
+          <p>No. Mathematical scaling adjusts quantities. It does not validate bake time, pan geometry, leavening, or results. Always test.</p>
+        </details>
+        <details>
+          <summary>How much does it cost?</summary>
+          <p>Pay-what-you-want from $6+ on <a href="https://ko-fi.com/s/a8e4befbbc" rel="noopener">Ko-fi</a>. One-time download — no subscription.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="disclaimer">
+      <div class="wrap">
+        <h2>Disclaimer</h2>
+        <p>This product is a costing aid for your own personal or business operations. Results depend entirely on the numbers you enter. Selling fees and taxes are excluded unless you model them. It is <strong>not</strong> legal, tax, accounting, nutrition, allergen, or food-safety advice. Mathematical scaling does not validate baking results. Do not resell or redistribute the workbook file.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Support: <a href="mailto:lamontsuggs7@gmail.com">lamontsuggs7@gmail.com</a> · Shop: <a href="https://ko-fi.com/doctorinebeam" rel="noopener">ko-fi.com/doctorinebeam</a></p>
+      <p class="fineprint">© Small-Batch Baker Recipe Cost Calculator · Digital product sold via Ko-fi</p>
+    </div>
+  </footer>
+
+  <script src="demo.js"></script>
+</body>
+</html>
